@@ -1,0 +1,14 @@
+Set objShell = WScript.CreateObject("WScript.Shell")
+
+' set the initial interval to 30 minutes (in milliseconds)
+interval = 1800000 
+
+' loop indefinitely
+While True 
+  ' wait for the interval
+  WScript.Sleep(interval)
+
+  ' display the reminder message
+  objShell.Popup "It's time to drink some water!", 5, "Water Reminder"
+  
+Wend
